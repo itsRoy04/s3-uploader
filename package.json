@@ -1,6 +1,6 @@
 {
   "name": "s3-upload-file",
-  "version": "1.0.3",
+  "version": "1.0.7",
   "description": "",
   "main": "index.js",
   "type": "commonjs",

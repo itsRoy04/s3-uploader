@@ -10,7 +10,7 @@ class S3Uploader {
       secretAccessKey: secretAccessKey,
       region: region,
     });
-
+    this.bucketName = bucketName;
     this.upload = multer({ dest: 'uploads/' });
   }
 
@@ -19,10 +19,9 @@ class S3Uploader {
   }
 
   async uploadFile(req) {
-    console.log("req.file.path", req.path);
     const fileStream = fs.createReadStream(req.path);
     let key = randomUUID();
-
+    console.log("key", this.bucketName);
     const uploadParams = {
       Bucket: this.bucketName,
       Key: `${key}`,

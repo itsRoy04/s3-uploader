@@ -11,11 +11,8 @@ npm install aws-sdk crypto fs multer
 
 
 
-License
+**License**
 This project is licensed under the MIT License - see the LICENSE file for details.
-
-
-
 
 
 const { S3Uploader } = require('s3-upload-file');
